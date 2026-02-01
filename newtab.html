@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Tab</title>
+    <link rel="stylesheet" href="newtab.css">
+</head>
+
+<body>
+    <div class="main-content">
+        <!-- Left side could be empty or have a greeting -->
+        <div class="greeting">
+            <h1 id="clock">00:00</h1>
+            <h2>Focus on what matters.</h2>
+        </div>
+    </div>
+
+    <div class="sidebar">
+        <header>
+            <h3>Upcoming Events</h3>
+            <button id="add-toggle-btn">+</button>
+        </header>
+
+        <div id="add-form" class="add-form hidden">
+            <input type="text" id="event-name" placeholder="Event Name" />
+            <input type="datetime-local" id="event-date" />
+            <button id="add-btn">Add</button>
+        </div>
+
+        <ul id="event-list" class="event-list">
+            <!-- Events will be added here dynamically -->
+        </ul>
+    </div>
+    <script src="newtab.js"></script>
+</body>
+
+</html>

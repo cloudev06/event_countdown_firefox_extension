@@ -1,0 +1,144 @@
+:root {
+    --primary-color: #a29bfe;
+    --primary-hover: #6c5ce7;
+    --bg-color: #2d3436;
+    --card-bg: #353b48;
+    --text-color: #dfe6e9;
+    --secondary-text: #b2bec3;
+    --danger-color: #ff7675;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    --radius: 8px;
+}
+
+body {
+    width: 320px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 16px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+header h1 {
+    font-size: 1.5rem;
+    margin: 0;
+    color: var(--primary-color);
+    text-align: center;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    background: var(--card-bg);
+    padding: 12px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+input {
+    padding: 8px 12px;
+    border: 1px solid #dfe6e9;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: border-color 0.2s;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+button#add-btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.2s;
+}
+
+button#add-btn:hover {
+    background-color: var(--primary-hover);
+}
+
+.event-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.event-item {
+    background: var(--card-bg);
+    padding: 12px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.1s;
+}
+
+.event-item:hover {
+    transform: translateY(-2px);
+}
+
+.event-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.event-info .name {
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.event-info .date {
+    font-size: 0.85rem;
+    color: var(--secondary-text);
+}
+
+.countdown-box {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.days-left {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.days-label {
+    font-size: 0.7rem;
+    color: var(--secondary-text);
+    text-transform: uppercase;
+}
+
+.delete-btn {
+    background: none;
+    border: none;
+    color: #b2bec3;
+    cursor: pointer;
+    font-size: 1.2rem;
+    margin-left: 8px;
+    padding: 4px;
+    transition: color 0.2s;
+}
+
+.delete-btn:hover {
+    color: var(--danger-color);
+}

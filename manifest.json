@@ -1,0 +1,32 @@
+{
+    "manifest_version": 3,
+    "name": "Event Countdown",
+    "version": "1.0",
+    "browser_specific_settings": {
+        "gecko": {
+            "id": "{5469956b-801b-4171-8728-662580577717}",
+            "strict_min_version": "109.0",
+            "data_collection_permissions": {
+                "required": [
+                    "none"
+                ]
+            }
+        }
+    },
+    "description": "A simple countdown timer for your upcoming events.",
+    "permissions": [
+        "storage"
+    ],
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "48": "icons/icon-48.png"
+        }
+    },
+    "chrome_url_overrides": {
+        "newtab": "newtab.html"
+    },
+    "icons": {
+        "48": "icons/icon-48.png"
+    }
+}

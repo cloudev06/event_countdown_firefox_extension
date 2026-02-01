@@ -1,0 +1,199 @@
+:root {
+    --primary-color: #a29bfe;
+    --primary-hover: #6c5ce7;
+    --bg-color: #2d3436;
+    --sidebar-bg: #353b48;
+    --text-color: #dfe6e9;
+    --secondary-text: #b2bec3;
+    --danger-color: #ff7675;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.main-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.greeting {
+    text-align: center;
+}
+
+#clock {
+    font-size: 6rem;
+    font-weight: 200;
+    margin: 0;
+    color: var(--text-color);
+}
+
+.greeting h2 {
+    font-weight: 400;
+    color: var(--secondary-text);
+    margin-top: 10px;
+}
+
+.sidebar {
+    width: 350px;
+    background-color: var(--sidebar-bg);
+    border-left: 1px solid #dfe6e9;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.05);
+    overflow-y: auto;
+}
+
+.sidebar header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.sidebar h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+#add-toggle-btn {
+    background: var(--bg-color);
+    border: none;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: var(--text-color);
+    transition: background 0.2s;
+}
+
+#add-toggle-btn:hover {
+    background: #e1e1e1;
+}
+
+.add-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: var(--bg-color);
+    padding: 16px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.add-form.hidden {
+    display: none;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid #dfe6e9;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+button#add-btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+button#add-btn:hover {
+    background-color: var(--primary-hover);
+}
+
+.event-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.event-item {
+    background: var(--bg-color);
+    padding: 16px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.1s;
+}
+
+.event-item:hover {
+    transform: translateY(-2px);
+}
+
+.event-info .name {
+    font-weight: 600;
+    font-size: 1.1rem;
+    display: block;
+}
+
+.event-info .date {
+    font-size: 0.9rem;
+    color: var(--secondary-text);
+}
+
+.countdown-box {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.days-left {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.days-label {
+    font-size: 0.75rem;
+    color: var(--secondary-text);
+    text-transform: uppercase;
+}
+
+.delete-btn {
+    background: none;
+    border: none;
+    color: #b2bec3;
+    cursor: pointer;
+    font-size: 1.2rem;
+    margin-left: 12px;
+    opacity: 0;
+    /* Hide by default on desktop for cleaner look */
+    transition: opacity 0.2s, color 0.2s;
+}
+
+.event-item:hover .delete-btn {
+    opacity: 1;
+}
+
+.delete-btn:hover {
+    color: var(--danger-color);
+}
