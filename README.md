@@ -1,5 +1,12 @@
 # event_countdown_firefox_extension
 as the repo name says
 =================================================
+20nd Jan:
+1. alpha verison
+=================================================
+22nd Jan:
+1. dark mode update
+2. time added
+=================================================
 31st Jan:
 1. git
