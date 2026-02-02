@@ -10,19 +10,25 @@
 
 <body>
     <div class="container">
-        <header>
-            <h1>Your Events</h1>
-        </header>
-
-        <div class="input-group">
-            <input type="text" id="event-name" placeholder="Event Name (e.g. Vacation)" />
-            <input type="datetime-local" id="event-date" />
-            <button id="add-btn">Add Event</button>
+        <div class="theme-selector">
+            <div class="theme-row">
+                <span class="theme-label">Theme</span>
+                <div class="theme-options">
+                    <button class="theme-btn active" data-theme="coffee" title="Coffee"></button>
+                    <button class="theme-btn" data-theme="matcha" title="Matcha"></button>
+                    <button class="theme-btn" data-theme="caramel" title="Caramel"></button>
+                    <button class="theme-btn" data-theme="oat" title="Oat"></button>
+                    <button class="theme-btn" data-theme="espresso" title="Espresso"></button>
+                </div>
+            </div>
+            <div class="theme-row">
+                <span class="theme-label">Mode</span>
+                <div class="mode-toggle">
+                    <button class="mode-btn" data-mode="dark">Dark</button>
+                    <button class="mode-btn active" data-mode="light">Light</button>
+                </div>
+            </div>
         </div>
-
-        <ul id="event-list" class="event-list">
-            <!-- Events will be added here dynamically -->
-        </ul>
     </div>
     <script src="popup.js"></script>
 </body>

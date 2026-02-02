@@ -10,7 +10,6 @@
 
 <body>
     <div class="main-content">
-        <!-- Left side could be empty or have a greeting -->
         <div class="greeting">
             <h1 id="clock">00:00</h1>
             <h2>Focus on what matters.</h2>
@@ -20,18 +19,58 @@
     <div class="sidebar">
         <header>
             <h3>Upcoming Events</h3>
-            <button id="add-toggle-btn">+</button>
+            <button id="add-toggle-btn"></button>
         </header>
 
-        <div id="add-form" class="add-form hidden">
+        <div id="add-form" class="add-form">
             <input type="text" id="event-name" placeholder="Event Name" />
-            <input type="datetime-local" id="event-date" />
-            <button id="add-btn">Add</button>
+            <input type="date" id="event-date" />
+            <div class="form-row">
+                <label class="all-day-toggle" id="all-day-toggle">
+                    <input type="checkbox" id="all-day" />
+                    <span>All Day</span>
+                </label>
+                <div class="time-input-wrapper" id="time-wrapper">
+                    <input type="text" id="event-time" placeholder="HH:MM" maxlength="5" />
+                </div>
+            </div>
+            <button id="add-btn">Add Event</button>
         </div>
 
-        <ul id="event-list" class="event-list">
-            <!-- Events will be added here dynamically -->
-        </ul>
+        <!-- Edit form -->
+        <div id="edit-form" class="edit-form">
+            <div class="edit-form-title">Edit Event</div>
+            <input type="text" id="edit-event-name" placeholder="Event Name" />
+            <input type="date" id="edit-event-date" />
+            <div class="form-row">
+                <label class="all-day-toggle" id="edit-all-day-toggle">
+                    <input type="checkbox" id="edit-all-day" />
+                    <span>All Day</span>
+                </label>
+                <div class="time-input-wrapper" id="edit-time-wrapper">
+                    <input type="text" id="edit-event-time" placeholder="HH:MM" maxlength="5" />
+                </div>
+            </div>
+            <div class="form-actions">
+                <button id="save-edit-btn">Save Changes</button>
+                <button id="cancel-edit-btn">Cancel</button>
+            </div>
+            <input type="hidden" id="edit-event-id" />
+        </div>
+
+        <div class="event-list-container">
+            <ul id="event-list" class="event-list">
+                <!-- Events will be added here dynamically -->
+            </ul>
+
+            <div id="pagination" class="pagination hidden">
+                <button id="prev-page" class="page-arrow">‹</button>
+                <div id="page-dots" class="page-dots">
+                    <!-- Dots generated dynamically -->
+                </div>
+                <button id="next-page" class="page-arrow">›</button>
+            </div>
+        </div>
     </div>
     <script src="newtab.js"></script>
 </body>
