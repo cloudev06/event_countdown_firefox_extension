@@ -585,7 +585,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (diffMs < 0) return { value: 'Passed', label: '', isHours: false };
 
         const diffHours = diffMs / (1000 * 60 * 60);
-        const diffDays = Math.ceil(diffMs / (1000 * 60 * 60 * 24));
+        const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
 
         if (diffHours < 24 && time) {
             const hours = Math.floor(diffHours);
