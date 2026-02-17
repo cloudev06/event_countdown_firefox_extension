@@ -32,3 +32,7 @@ as the repo name says
 11. bubble effect when delete
 
 ===
+
+16th Feb:
+1. time fix
+2. homepage takeover
